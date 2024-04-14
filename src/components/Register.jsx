@@ -1,8 +1,12 @@
 import React from 'react'
+import Container from '@mui/material/Container'; 
 
-function Register() {
+
+const Register = () => {
   return (
-    <div>Register</div>
+    <Container>
+      
+    </Container>
   )
 }
 
