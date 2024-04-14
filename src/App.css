@@ -5,3 +5,7 @@ body {
     color: #000;
     font-family: 'Plus Jakarta Display', sans-serif;
 }
+
+.text-field {
+    margin-bottom: 10px;
+}
