@@ -24,7 +24,6 @@ function Login() {
               <div className='form-group'>
                 <TextField helperText="Please enter your Email Address" type='email' label="Email" fullWidth style={{marginBottom:'10px'}}/>
                 <TextField helperText="Please enter your Password" type='password' label="Password" fullWidth style={{marginBottom:'10px'}}/>
-
               </div>
             </Grid>
 

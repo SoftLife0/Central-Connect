@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Headings from './components/Headings';
 import Header from './components/Header';
 import Login from './components/Login';
+import Year from './components/Year';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/headings" element={<Headings />} />
             <Route path="/header" element={<Header />} />
+            <Route path="/year" element={<Year />} />
           </Routes>
       </div>
     </Router>
