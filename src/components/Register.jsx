@@ -8,7 +8,7 @@ import SubmitButton from './Button';
 
 const Register = () => {
   return (
-    <div>
+    <>
       <Header />
       <Container style={{marginTop:'12vh'}}>
         {/* Usage of Heading Component  */}
@@ -42,7 +42,7 @@ const Register = () => {
         </div>
 
       </Container>
-    </div>
+    </>
   )
 }
 

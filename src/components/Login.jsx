@@ -8,7 +8,7 @@ import SubmitButton from './Button';
 
 function Login() {
   return (
-    <div>
+    <>
       <Header />
       <Container style={{marginTop:'12vh'}}>
         {/* Usage of Heading Component  */}
@@ -39,7 +39,7 @@ function Login() {
         </div>
 
       </Container>
-    </div>
+    </>
   )
 }
 
