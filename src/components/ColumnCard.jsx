@@ -1,40 +1,34 @@
 import * as React from 'react';
-import { styled, Grid, Paper } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { experimentalStyled as styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
+const Item = styled(Paper)({
+  backgroundColor: '#fff',
+  padding: '30px',
+  borderRadius: '15px',
+  color: '#000',
+  margin: 0,
+  boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  justifyContent: 'space-between',
   textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+});
 
-const ColumnCard = ({ url, title, count }) => {
+const ColumnCard = ({ cardContent }) => {
   return (
-    <>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={6} md={6} className='dashboard-item' style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px', color: '#000', margin: 0, boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px', marginBottom: '5vh', justifyContent: 'space-between' }}>
-          <Link to={url} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div data-aos="fade-up" data-aos-delay="100" className="card" style={{ textAlign: 'center' }}>
-              <h1 style={{fontWeight: 'bold' }}>{title}</h1>
-              <h4>{count}</h4>
-            </div>
-          </Link>
-        </Grid>
-
-        <Grid item xs={6} md={65} className='dashboard-item' style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px', color: '#000', margin: 0, boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px', marginBottom: '5vh', justifyContent: 'space-between' }}>
-          <Link to={url} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div data-aos="fade-up" data-aos-delay="100" className="card" style={{ textAlign: 'center' }}>
-              <h1 style={{fontWeight: 'bold' }}>{title}</h1>
-              <h4>{count}</h4>
-            </div>
-          </Link>
-        </Grid>
-
-
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        {cardContent.map((card, index) => (
+          <Grid item xs={2} sm={4} md={4} key={index}>
+            <Item>
+              <h1 style={{fontWeight: 'bold' }}>{card.title}</h1>
+              <h4>{card.count}</h4>
+            </Item>
+          </Grid>
+        ))}
       </Grid>
-    </>
+    </Box>
   );
 }
 

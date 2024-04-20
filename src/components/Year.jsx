@@ -5,6 +5,15 @@ import { Container } from '@mui/material'
 import ColumnCard from './ColumnCard'
 
 const Year = () => {
+
+  const cardContent = [
+    { title: "2023", count: "1094 Graduates" },
+    { title: "2022", count: "1264 Graduates" },
+    { title: "2021", count: "1094 Graduates" },
+    { title: "2020", count: "1794 Graduates" },
+    { title: "2019", count: "1994 Graduates" },
+  ];
+
   return (
     <>
       <Header />
@@ -16,9 +25,7 @@ const Year = () => {
         </div>
 
         <div>
-          <ColumnCard title="2022" count="1264 Graduates" url="/login" />
-          <ColumnCard title="2021" count="1094 Graduates" url="/login" />
-         
+          <ColumnCard cardContent={cardContent} />          
         </div>
 
       </Container>
