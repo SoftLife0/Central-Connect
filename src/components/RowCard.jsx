@@ -3,7 +3,7 @@ import { styled, Card, CardContent, Typography, Box, IconButton } from '@mui/mat
 import SchoolIcon from '@mui/icons-material/School';
 import { Link } from 'react-router-dom';
 
-const RowCard = ({ imageSrc, title, subTitle, page }) => {
+const RowCard = ({ imageSrc, title, subTitle, linkTo }) => {
 
     const StyledLink = styled(Link)({
         color: 'inherit',
@@ -12,7 +12,7 @@ const RowCard = ({ imageSrc, title, subTitle, page }) => {
 
   return (
     <>
-        <StyledLink to='/login'>
+        <StyledLink to={linkTo}>
         <Card sx={{ backgroundColor: '#fff', padding: '8px', borderRadius: '15px', color: '#000', margin: 0, boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px', display: 'flex', alignItems: 'center', marginBottom: 2 }}>
             <Box sx={{ width: 60, height: 60, marginRight: 2 }}>
                 <img src={imageSrc} alt="School" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />

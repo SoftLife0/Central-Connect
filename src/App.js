@@ -7,6 +7,7 @@ import Year from './pages/Year';
 import School from './pages/School';
 import Department from './pages/Department';
 import List from './pages/List';
+import Bio from './pages/Bio';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/school" element={<School />} />
             <Route path="/department" element={<Department />} />
             <Route path="/list" element={<List />} />
+            <Route path="/bio" element={<Bio />} />
           </Routes>
       </div>
     </Router>

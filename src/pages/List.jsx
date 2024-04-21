@@ -25,7 +25,7 @@ const List = () => {
         </div>
        
         <div>
-          <RowCard imageSrc={logo2} title="Nana Kweku Adumatta" subTitle="0545977791"/>          
+          <RowCard imageSrc={logo2} title="Nana Kweku Adumatta" subTitle="0545977791" linkTo="/bio"/>          
           <RowCard imageSrc={logo1} title="Onikosi Adewale" subTitle="0592033701"/>          
         </div>
 
