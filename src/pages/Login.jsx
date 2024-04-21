@@ -1,10 +1,10 @@
 import React from 'react'
 import Container from '@mui/material/Container'; 
-import Headings from './Headings';
-import Header from './Header';
+import Headings from '../components/Headings';
+import Header from '../components/Header';
 // import logo from '../assets/Central.png'
 import { Grid, TextField } from '@mui/material';
-import SubmitButton from './Button';
+import SubmitButton from '../components/Button';
 
 function Login() {
   return (

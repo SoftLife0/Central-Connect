@@ -15,7 +15,7 @@ const Search = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={2} justifyContent="center" style={{marginBottom:'3vh'}}>
         <Grid item xs={12} sm={8} md={12}>
           <SearchInput
             label="Search"

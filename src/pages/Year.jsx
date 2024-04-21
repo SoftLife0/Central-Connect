@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './Header'
-import Headings from './Headings'
+import Header from '../components/Header'
+import Headings from '../components/Headings'
 import { Container } from '@mui/material'
-import ColumnCard from './ColumnCard'
-import Search from './Search'
+import ColumnCard from '../components/ColumnCard'
+import Search from '../components/Search'
 
 const Year = () => {
 

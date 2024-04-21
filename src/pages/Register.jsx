@@ -1,9 +1,9 @@
 import React from 'react'
-import Headings from './Headings';
-import Header from './Header';
+import Headings from '../components/Headings';
+import Header from '../components/Header';
 // import logo from '../assets/Central.png'
 import { Container, Grid, TextField } from '@mui/material';
-import SubmitButton from './Button';
+import SubmitButton from '../components/Button';
 
 const Register = () => {
   return (
