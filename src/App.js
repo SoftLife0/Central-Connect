@@ -5,6 +5,8 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Year from './pages/Year';
 import School from './pages/School';
+import Department from './pages/Department';
+import List from './pages/List';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/year" element={<Year />} />
             <Route path="/school" element={<School />} />
+            <Route path="/department" element={<Department />} />
+            <Route path="/list" element={<List />} />
           </Routes>
       </div>
     </Router>

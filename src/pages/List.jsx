@@ -5,9 +5,10 @@ import { Container } from '@mui/material'
 // import ColumnCard from '../components/ColumnCard'
 import Search from '../components/Search'
 import RowCard from '../components/RowCard'
-import logo from '../assets/about.jpg'
+import logo1 from '../assets/Softlife.jpeg'
+import logo2 from '../assets/kweku.jpg'
 
-const Department = () => {
+const List = () => {
 
   return (
     <>
@@ -16,7 +17,7 @@ const Department = () => {
 
         {/* Usage of Heading Component  */}
         <div>
-          <Headings subTitle="2021 - School of Engineering and Technology" mainTitle="Departments" description="3 entries" />
+          <Headings subTitle="2021 - School of Engineering and Technology" mainTitle="Information Technology" description="111 Graduates" />
         </div>
 
         <div>
@@ -24,9 +25,8 @@ const Department = () => {
         </div>
        
         <div>
-          <RowCard imageSrc={logo} title="Information Technology" subTitle="34 Graduants"/>          
-          <RowCard imageSrc={logo} title="Computer Science" subTitle="51 Graduants"/>          
-          <RowCard imageSrc={logo} title="Civil Engineering" subTitle="78 Graduants"/>          
+          <RowCard imageSrc={logo2} title="Nana Kweku Adumatta" subTitle="0545977791"/>          
+          <RowCard imageSrc={logo1} title="Onikosi Adewale" subTitle="0592033701"/>          
         </div>
 
       </Container>
@@ -34,4 +34,4 @@ const Department = () => {
   )
 }
 
-export default Department;
+export default List;

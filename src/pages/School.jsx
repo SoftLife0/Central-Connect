@@ -24,7 +24,7 @@ const School = () => {
 
         {/* Usage of Heading Component  */}
         <div>
-          <Headings subTitle="2021 Year Group" mainTitle="Schools" description="9 entries" />
+          <Headings subTitle="2021" mainTitle="Schools" description="9 entries" />
         </div>
 
         <div>
@@ -32,9 +32,9 @@ const School = () => {
         </div>
        
         <div>
-          <RowCard imageSrc={logo} schoolName="School of Engineering and Technology" number="1340"/>          
-          <RowCard imageSrc={logo} schoolName="Faculty of Arts and Social Sciences" number="1340"/>          
-          <RowCard imageSrc={logo} schoolName="Graduate School" number="1340"/>          
+          <RowCard imageSrc={logo} title="School of Engineering and Technology" subTitle="1340 Graduates"/>          
+          <RowCard imageSrc={logo} title="Faculty of Arts and Social Sciences" subTitle="1340 Graduates"/>          
+          <RowCard imageSrc={logo} title="Graduate School" subTitle="1340 Graduates"/>          
         </div>
 
       </Container>
