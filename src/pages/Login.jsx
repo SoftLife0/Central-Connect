@@ -31,7 +31,8 @@ function Login() {
         </div>
 
         <div>
-          <SubmitButton text="Connect Now"/>
+          <SubmitButton text="Connect Now" to="/year"/>
+
           <div style={{textAlign:'center'}}>
             <small ><a href="/register">Create an account now</a></small>
           </div>
