@@ -6,6 +6,7 @@ import Headings from './components/Headings';
 import Header from './components/Header';
 import Login from './components/Login';
 import Year from './components/Year';
+import Search from './components/Search';
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
           <Route path="/login" element={<Login />} /> {/* Use 'element' prop instead of children */}
             <Route path="/register" element={<Register />} />
             <Route path="/headings" element={<Headings />} />
-            <Route path="/header" element={<Header />} />
+            <Route path="" element={<Header />} />
             <Route path="/year" element={<Year />} />
+            <Route path="" element={<Search />} />
           </Routes>
       </div>
     </Router>

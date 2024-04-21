@@ -3,6 +3,7 @@ import Header from './Header'
 import Headings from './Headings'
 import { Container } from '@mui/material'
 import ColumnCard from './ColumnCard'
+import Search from './Search'
 
 const Year = () => {
 
@@ -17,13 +18,17 @@ const Year = () => {
   return (
     <>
       <Header />
-      <Container style={{marginTop:'12vh'}}>
+      <Container style={{marginTop:'12vh', marginBottom:'5vh'}}>
 
         {/* Usage of Heading Component  */}
         <div>
           <Headings subTitle="Central University Alumni Platform" mainTitle="Select your Year Group" description="16 entries" />
         </div>
 
+        <div>
+          <Search />
+        </div>
+       
         <div>
           <ColumnCard cardContent={cardContent} />          
         </div>
