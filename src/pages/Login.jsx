@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@mui/material/Container'; 
 import Headings from '../components/Headings';
 import Header from '../components/Header';
-// import logo from '../assets/Central.png'
+import logo from '../assets/img/Central.png'
 import { Grid, TextField } from '@mui/material';
 import SubmitButton from '../components/Button';
 
@@ -16,14 +16,16 @@ function Login() {
           <Headings subTitle="central connect" mainTitle="Login" description="Ener your credentials to access your alumni account" />
         </div>
 
-        {/* <img src={logo} alt="" width={200}/> */}
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+          <img src={logo} alt="" width={400}/>
+        </div>
 
         <div style={{marginTop:'5vh'}}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <div className='form-group'>
-                <TextField helperText="Please enter your Email Address" type='email' label="Email" fullWidth style={{marginBottom:'10px'}}/>
-                <TextField helperText="Please enter your Password" type='password' label="Password" fullWidth style={{marginBottom:'10px'}}/>
+              <div>
+                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Email Address' label="Email" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Password' label="Password" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
               </div>
             </Grid>
 

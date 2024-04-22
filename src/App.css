@@ -55,27 +55,28 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+    font-family: 'SF UI Display Semibold', sans-serif;
 }
 
 .heading-subtitle {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: 'SF UI Display Thin', sans-serif;
-    letter-spacing: 0.5;
+    font-family: 'SF UI Display', sans-serif;
+    color: grey;
 }
 
 .heading-title {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: 'SF UI Display Bold', sans-serif;
-    letter-spacing: 0.5;
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 800;
 }
 
 .heading-description {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: 'SF UI Display Semibold', sans-serif;
-  letter-spacing: 0.5;
+  font-family: 'SF UI Display', sans-serif;
+color: grey;
 }
 
 .card-title {
@@ -87,4 +88,18 @@ body {
 .card-description {
     font-family: 'SF UI Display', sans-serif;
     color: grey;
+  }
+
+  .row-title {
+    font-family: 'SF UI Display Semibold', sans-serif;
+    margin: 2px 0;
+  }
+
+  .row-description {
+    font-family: 'SF UI Display Ultralight', sans-serif;
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    font-family: 'SF UI Display', sans-serif;
   }

@@ -20,12 +20,12 @@ const Register = () => {
         <div style={{marginTop:'5vh'}}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <div className='form-group'>
-                <TextField helperText="Please enter your Name" type='name' label="Name" fullWidth style={{marginBottom:'10px'}}/>
-                <TextField helperText="Please enter your Email Address" type='email' label="Email" fullWidth style={{marginBottom:'10px'}}/>
-                <TextField helperText="Please enter your Index Number" type='text' label="Index Number" fullWidth style={{marginBottom:'10px'}}/>
-                <TextField helperText="Please enter your Password" type='password' label="Password" fullWidth style={{marginBottom:'10px'}}/>
-                <TextField helperText="Please Confirm Password" type='password' label="Confirm Password" fullWidth style={{marginBottom:'10px'}}/>
+              <div>
+                <TextField className='form-group' id="standard-textarea" type='name' placeholder='Please enter your Full Name' label="Full Name" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" type='email' placeholder='Please enter your Email Address' label="Email" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" type='text' placeholder='Please enter a Username' label="Username" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" type='password' placeholder='Please enter a Strong Password' label="Password" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" type='password' placeholder='Please enter a Strong Password' label="Confirm Password" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
 
               </div>
             </Grid>
@@ -34,7 +34,7 @@ const Register = () => {
         </div>
 
         <div>
-          <SubmitButton text="Connect Now"/>
+          <SubmitButton text="Create Account"/>
           <div style={{textAlign:'center'}}>
             <small ><a href="/login">Already have an account ?</a></small>
           </div>

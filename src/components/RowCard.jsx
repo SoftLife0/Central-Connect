@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, Card, CardContent, Typography, Box, IconButton } from '@mui/material';
+import { styled, Card, CardContent, Box, IconButton } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import { Link } from 'react-router-dom';
 
@@ -20,12 +20,12 @@ const RowCard = ({ imageSrc, title, subTitle, linkTo }) => {
             
             <CardContent sx={{ flex: 1 }}>
 
-                <Typography variant="h6" component="h2" style={{fontWeight: 'bold' }}>
+                {/* <Typography variant="h6" component="h2" className='row-title'>
                 {title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                {subTitle}
-                </Typography>
+                </Typography> */}
+                <h3 className='row-title'>{title}</h3>
+                <h6 className='row-description'>{subTitle}</h6>
+    
             </CardContent>
             
             <IconButton>
