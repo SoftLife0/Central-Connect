@@ -16,6 +16,9 @@ const Item = styled(Paper)({
   '&:hover': {
     backgroundColor: '#dc3545',
     color: '#fff',
+    '& .card-description': {
+      color: '#fff',
+    },
   },
 });
 

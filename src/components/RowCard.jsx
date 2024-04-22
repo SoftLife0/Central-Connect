@@ -24,7 +24,7 @@ const RowCard = ({ imageSrc, title, subTitle, linkTo }) => {
                 {title}
                 </Typography> */}
                 <h3 className='row-title'>{title}</h3>
-                <h6 className='row-description'>{subTitle}</h6>
+                <h5 className='row-description'>{subTitle}</h5>
     
             </CardContent>
             

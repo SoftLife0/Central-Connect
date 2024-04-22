@@ -63,7 +63,7 @@ body {
     margin-bottom: 10px;
     font-family: 'SF UI Display', sans-serif;
     color: grey;
-}
+}   
 
 .heading-title {
     margin-top: 10px;
@@ -91,13 +91,15 @@ color: grey;
   }
 
   .row-title {
-    font-family: 'SF UI Display Semibold', sans-serif;
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 800;
     margin: 2px 0;
   }
 
   .row-description {
-    font-family: 'SF UI Display Ultralight', sans-serif;
-    margin-bottom: 0;
+    font-family: 'SF UI Display', sans-serif;
+    margin: 0;
+    font-weight: 500;
   }
 
   .form-group {
