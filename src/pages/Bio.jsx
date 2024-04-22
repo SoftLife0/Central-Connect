@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Box } from '@mui/material';
-import imageSrc from '../assets/kweku.jpg'
+import imageSrc from '../assets/img/kweku.jpg'
 import Header from '../components/Header';
 import Profile from '../components/Profile';
 import CustomModal from '../components/CustomModal';

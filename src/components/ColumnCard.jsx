@@ -32,8 +32,8 @@ const ColumnCard = ({ cardContent }) => {
           <Grid item xs={2} sm={4} md={4} key={index}>
             <StyledLink to='/school'>
               <Item>
-                <h1 style={{fontWeight: 'bold' }}>{card.title}</h1>
-                <h4>{card.count}</h4>
+                <h1 className='card-title'>{card.title}</h1>
+                <h5 className='card-description'>{card.count}</h5>
               </Item>
             </StyledLink>
           </Grid>

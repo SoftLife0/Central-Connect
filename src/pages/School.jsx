@@ -4,7 +4,7 @@ import Headings from '../components/Headings'
 import { Container } from '@mui/material'
 import Search from '../components/Search'
 import RowCard from '../components/RowCard'
-import logo from '../assets/fav.png'
+import logo from '../assets/img/fav.png'
 
 const School = () => {
 

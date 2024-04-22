@@ -5,8 +5,8 @@ import { Container } from '@mui/material'
 // import ColumnCard from '../components/ColumnCard'
 import Search from '../components/Search'
 import RowCard from '../components/RowCard'
-import logo1 from '../assets/Softlife.jpeg'
-import logo2 from '../assets/kweku.jpg'
+import logo1 from '../assets/img/Softlife.jpeg'
+import logo2 from '../assets/img/kweku.jpg'
 
 const List = () => {
 

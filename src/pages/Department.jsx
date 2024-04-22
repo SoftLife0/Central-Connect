@@ -5,7 +5,7 @@ import { Container } from '@mui/material'
 // import ColumnCard from '../components/ColumnCard'
 import Search from '../components/Search'
 import RowCard from '../components/RowCard'
-import logo from '../assets/about.jpg'
+import logo from '../assets/img/about.jpg'
 
 const Department = () => {
 
