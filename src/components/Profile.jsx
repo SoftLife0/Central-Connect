@@ -4,9 +4,8 @@ import { Typography, Box, Avatar } from '@mui/material';
 const Profile = ({ name, imageSrc, bio, additionalInfo }) => {
   return (
     <Box sx={{ textAlign: 'center', marginTop: 2 }}>
-      <Typography variant="h4" component="h2" style={{ fontWeight: 'bold' }} gutterBottom>
-        {name}
-      </Typography>
+      <h1 className='card-title'>{name}</h1>
+
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Avatar sx={{ width: 150, height: 150 }} alt={name} src={imageSrc} />
       </Box>

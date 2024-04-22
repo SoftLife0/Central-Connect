@@ -105,3 +105,8 @@ color: grey;
   .form-group {
     font-family: 'SF UI Display', sans-serif;
   }
+
+  .profile-description {
+    font-family: 'SF UI Display', sans-serif;
+    margin: 0;
+  }
