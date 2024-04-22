@@ -14,10 +14,10 @@ const Register = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prevState => ({
+      ...prevState,
       [name]: value
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -60,7 +60,7 @@ const Register = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  id="standard-textarea"
+                  id="fullName"
                   type='text'
                   placeholder='Please enter your Full Name'
                   label="Full Name"
@@ -73,7 +73,7 @@ const Register = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  id="standard-textarea"
+                  id="email"
                   type='email'
                   placeholder='Please enter your Email Address'
                   label="Email"
@@ -86,7 +86,7 @@ const Register = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  id="standard-textarea"
+                  id="password"
                   type='password'
                   placeholder='Please enter a Strong Password'
                   label="Password"
@@ -99,7 +99,7 @@ const Register = () => {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  id="standard-textarea"
+                  id="confirmPassword"
                   type='password'
                   placeholder='Please enter a Strong Password'
                   label="Confirm Password"
