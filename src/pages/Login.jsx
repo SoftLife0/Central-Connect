@@ -24,8 +24,8 @@ function Login() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <div>
-                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Email Address' label="Email" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
-                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Password' label="Password" multiline variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Email Address' label="Email" variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
+                <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Password' label="Password" variant='standard' fullWidth style={{marginBottom:'3vh'}}/>
               </div>
             </Grid>
 
