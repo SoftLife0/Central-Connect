@@ -64,7 +64,6 @@ const Register = () => {
                   type='text'
                   placeholder='Please enter your Full Name'
                   label="Full Name"
-                  multiline
                   variant='standard'
                   fullWidth
                   style={{ marginBottom: '3vh' }}
@@ -77,7 +76,6 @@ const Register = () => {
                   type='email'
                   placeholder='Please enter your Email Address'
                   label="Email"
-                  multiline
                   variant='standard'
                   fullWidth
                   style={{ marginBottom: '3vh' }}
@@ -90,7 +88,6 @@ const Register = () => {
                   type='password'
                   placeholder='Please enter a Strong Password'
                   label="Password"
-                  multiline
                   variant='standard'
                   fullWidth
                   style={{ marginBottom: '3vh' }}
@@ -103,7 +100,6 @@ const Register = () => {
                   type='password'
                   placeholder='Please enter a Strong Password'
                   label="Confirm Password"
-                  multiline
                   variant='standard'
                   fullWidth
                   style={{ marginBottom: '3vh' }}
