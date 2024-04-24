@@ -8,6 +8,7 @@ import School from './pages/School';
 import Department from './pages/Department';
 import List from './pages/List';
 import Bio from './pages/Bio';
+import EditProfile from './pages/EditProfile';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/department" element={<Department />} />
             <Route path="/list" element={<List />} />
             <Route path="/bio" element={<Bio />} />
+            <Route path="/edit" element={<EditProfile />} />
           </Routes>
       </div>
     </Router>

@@ -6,7 +6,7 @@ import logo from '../assets/img/Central.png'
 import { Grid, TextField } from '@mui/material';
 import SubmitButton from '../components/Button';
 
-function Login() {
+const Login = () => {
   return (
     <>
       <Header />
