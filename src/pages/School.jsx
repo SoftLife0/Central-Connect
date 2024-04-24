@@ -23,9 +23,9 @@ const School = () => {
         </div>
        
         <div>
-          <RowCard imageSrc={logo} title="School of Engineering and Technology" subTitle="1340 Graduates" linkTo="/list"/>          
-          <RowCard imageSrc={logo} title="Faculty of Arts and Social Sciences" subTitle="1340 Graduates" />          
-          <RowCard imageSrc={logo} title="Graduate School" subTitle="1340 Graduates"/>          
+          <RowCard imageSrc={logo} title="School of Engineering and Technology" subTitle="1340 Graduates" linkTo="/department" />          
+          <RowCard imageSrc={logo} title="Faculty of Arts and Social Sciences" subTitle="1340 Graduates" linkTo="/department" />          
+          <RowCard imageSrc={logo} title="Graduate School" subTitle="1340 Graduates" linkTo="/department" />          
         </div>
 
       </Container>

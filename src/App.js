@@ -16,7 +16,7 @@ function App() {
       <div>
         {/* Define routes using Route component */}
         <Routes> {/* Use Routes to ensure only one route is rendered at a time */}
-          <Route path="/login" element={<Login />} /> {/* Use 'element' prop instead of children */}
+          <Route path="/" element={<Login />} /> {/* Use 'element' prop instead of children */}
             <Route path="/register" element={<Register />} />
             <Route path="/year" element={<Year />} />
             <Route path="/school" element={<School />} />
