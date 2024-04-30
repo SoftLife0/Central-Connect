@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import { Box, Modal } from '@mui/material';
 import SubmitButton from './Button';
+import { Link } from 'react-router-dom';
+
 
 const style = {
   position: 'absolute',
@@ -31,12 +31,8 @@ const CustomModal = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <h2 id="modal-modal-title">Fill Alumni Tracer Form  👇</h2>
+          <Link to="/tracerform">alumni.tracerform.edu.gh</Link>
         </Box>
       </Modal>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SubmitButton from '../components/Button';
 import Info from '../components/Info';
@@ -7,6 +8,7 @@ import Employment from '../components/Employment';
 import Skill from '../components/Skill';
 import Suggestion from '../components/Suggestion';
 import LoadingSpinner from '../components/LoadingSpinner';
+import Success from './Success';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -89,6 +91,8 @@ const Form = () => {
     });
   };
 
+  const navigate = useNavigate();
+
   const handleNext = () => {
     setStep(step + 1);
   };
@@ -96,28 +100,33 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!formData.gender || !formData.workAddress || !formData.mobileNumber || !formData.residence) {
+      alert('Please fill in all required fields.'); // Display an alert if required fields are empty
+      return;
+    }
+  
     try {
       setLoading(true);
-      const response = await fetch('YOUR_API_ENDPOINT', {
+      const response = await fetch('https://forms.central.edu.gh/api/tracerform', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
-
+  
       if (response.ok) {
         setLoading(false);
-        // Handle successful form submission (e.g., show success message)
         console.log('Form submitted successfully!');
+        navigate('/success');
       } else {
-        // Handle unsuccessful form submission (e.g., show error message)
-        console.error('Failed to submit form');
+        throw new Error('Failed to submit form'); // Throw an error for unsuccessful submission
       }
     } catch (error) {
-      // Handle error (e.g., show error message)
       console.error('Error submitting form:', error);
       setLoading(false); // Reset loading state
+      // Display an error message to the user
+      alert('Failed to submit form. Please try again later.');
     }
   };
 
@@ -153,7 +162,8 @@ const Form = () => {
 
       {/* Loading Screen */}
       {loading && <LoadingSpinner message="Loading..." />}
-    
+
+      <Success message="Form submitted successfully! Thank you for your submission. ajkcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
     </>
   );
 }
