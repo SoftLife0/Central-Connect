@@ -24,6 +24,12 @@ const Login = () => {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <div>
+                {/* <div className='form-control'>
+                  <label htmlFor="email">Email</label>
+                  <input type="email" className='answerCard' />
+
+                </div> */}
+                
                 <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Email Address' label="Email" variant='standard' fullWidth style={{marginBottom:'2vh'}}/>
                 <TextField className='form-group' id="standard-textarea" placeholder='Please enter your Password' label="Password" variant='standard' fullWidth style={{marginBottom:'2vh'}}/>
               </div>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SubmitButton = ({ text, onClick, to }) => {
   return (
     <Link to={to} style={{ textDecoration: 'none' }}>
-      <Button variant="contained" onClick={onClick} style={{ textAlign: 'center', width: '100%', margin: '2vh 0', background: '#dc3545', padding: '10px 22px', textTransform:'capitalize' }}>
+      <Button className='pill-button' variant="contained" onClick={onClick} style={{ padding:'13px', fontWeight:'bold', textAlign:'center', width:'100%', margin:'4vh 0', background:'#dc3545' }}>
         <b>{text}</b>
       </Button>
     </Link>
