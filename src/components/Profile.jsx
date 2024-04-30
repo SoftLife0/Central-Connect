@@ -9,6 +9,7 @@ const Profile = ({ name, imageSrc, bio, additionalInfo }) => {
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Avatar sx={{ width: 150, height: 150 }} alt={name} src={imageSrc} />
       </Box>
+      
       <Box sx={{ textAlign: 'center', marginTop: 2 }}>
         <Typography variant="h6" gutterBottom style={{ textAlign: 'justify' }}>
           {bio}

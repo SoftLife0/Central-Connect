@@ -9,6 +9,8 @@ import Department from './pages/Department';
 import List from './pages/List';
 import Bio from './pages/Bio';
 import EditProfile from './pages/EditProfile';
+import Form from './pages/Form';
+import Success from './pages/Success';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
             <Route path="/list" element={<List />} />
             <Route path="/bio" element={<Bio />} />
             <Route path="/edit" element={<EditProfile />} />
+            <Route path="/tracerform" element={<Form />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
       </div>
     </Router>

@@ -110,3 +110,61 @@ color: grey;
     font-family: 'SF UI Display', sans-serif;
     margin: 0;
   }
+
+  .pill-button{
+    color: #dc3545;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius:10px ;
+    padding: 16px 22px;
+    /* box-shadow: 0 2px 8px 0 rgba(220, 53, 69); */
+    text-align: center;
+    font-weight: bold;
+    transition: width 2s;
+    font-size: 16px;
+    font-family: 'SF UI Display Bold', sans-serif;
+
+}
+
+.headings h2 {
+    font-size: 25px;
+    font-family: 'SF UI Display ', sans-serif; 
+    margin: 1vh 0;
+}
+
+.headings p {
+    text-align: justify;
+    font-family: 'SF UI Display ', sans-serif;
+    margin: 1vh 0;
+}
+
+.checkmark {
+    color: #9ABC66;
+      font-size: 100px;
+      line-height: 200px;
+      margin-left:-15px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-family: 'SF UI Display ', sans-serif; /* Apply SF UI Display font */
+  }
+  
+  .answerCard {
+    -webkit-appearance: none;
+    display: flex;
+    padding: 20px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    margin-top: 10px; /* Add some space between the label and input */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .answerCard:focus {
+    outline: none;
+  }
