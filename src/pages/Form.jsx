@@ -8,7 +8,7 @@ import Employment from '../components/Employment';
 import Skill from '../components/Skill';
 import Suggestion from '../components/Suggestion';
 import LoadingSpinner from '../components/LoadingSpinner';
-import Success from './Success';
+
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -99,11 +99,13 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!formData.gender || !formData.workAddress || !formData.mobileNumber || !formData.residence) {
-      alert('Please fill in all required fields.'); // Display an alert if required fields are empty
-      return;
-    }
+  
+    // if (!formData.gender || !formData.workAddress || !formData.mobileNumber || !formData.residence) {
+    //   alert('Please fill in all required fields.');
+    //   return;
+    // }
+  
+    console.log('Form Data:', formData); // Log formData for debugging
   
     try {
       setLoading(true);
@@ -117,7 +119,6 @@ const Form = () => {
   
       if (response.ok) {
         setLoading(false);
-        console.log('Form submitted successfully!');
         navigate('/success');
       } else {
         throw new Error('Failed to submit form'); // Throw an error for unsuccessful submission
@@ -145,7 +146,7 @@ const Form = () => {
         </div>
       )}
 
-        <div onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           {step === 1 && <Info formData={formData} onChange={handleInputChange} />}
           {step === 2 && <Employment formData={formData} onChange={handleInputChange} />}
           {step === 3 && <Skill formData={formData} onChange={handleInputChange} />}
@@ -157,13 +158,12 @@ const Form = () => {
           ) : (
             <SubmitButton onClick={handleSubmit} text="Submit" />
           )}
-        </div>
+        </form>
       </Container>
 
       {/* Loading Screen */}
       {loading && <LoadingSpinner message="Loading..." />}
 
-      <Success message="Form submitted successfully! Thank you for your submission. ajkcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
     </>
   );
 }
