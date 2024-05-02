@@ -11,83 +11,16 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    gender: '',
-    workAddress: '',
-    mobileNumber: '',
-    residence: '',
-    programmePursued: '',
-    yearOfCompletion: '',
-    others: '',
-    pro: '',
-    institution: '',
-    completed: '',
-    satisfaction: '',
-    // Initial state for employment information
-    current: '',
-    job: '',
-    service: '',
-    orgname: '',
-    orgadd: '',
-    title: '',
-    orgtype: '',
-    salary: '',
-    employment: '',
-    skills: '',
-    timeframe: '',
-    earn: '',
-    // Intia state for Skill Information
-    theoretical: '',
-    technical: '',
-    communication: '',
-    comprehension: '',
-    quantitative: '',
-    computer: '',
-    critical: '',
-    research: '',
-    team: '',
-    planning: '',
-    management: '',
-    quality: '',
-    creative: '',
-    adaptable: '',
-    responsible: '',
-    // Initail state for Ability Information
-    theoreticals: '',
-    technicals: '',
-    communications: '',
-    comprehensions: '',
-    quantitatives: '',
-    computers: '',
-    criticals: '',
-    researchs: '',
-    teams: '',
-    plannings: '',
-    managements: '',
-    qualitys: '',
-    creatives: '',
-    adaptables: '',
-    responsibles: '',
-    staying: '',
-    schoolReturn: '',
-    unemployedReason: '',
-    work: '',
-    workframe: '',
-    // Initial state for Suggestions
-    overall: '',
-    recommend: '',
-    suggestion: ''
-
-  });
+  const [formData, setFormData] = useState({});
 
   const [step, setStep] = useState(1); // State to track current step
 
   const [loading, setLoading] = useState(false);
   // Define onChange function to handle form field changes
-  const handleInputChange = (name, value) => {
+  const handleInputChange = (question, value) => {
     setFormData({
       ...formData,
-      [name]: value
+      [question]: value
     });
   };
 
@@ -119,14 +52,14 @@ const Form = () => {
   
       if (response.ok) {
         setLoading(false);
+        console.log('Form submitted successfully!');
         navigate('/success');
       } else {
         throw new Error('Failed to submit form'); // Throw an error for unsuccessful submission
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setLoading(false); // Reset loading state
-      // Display an error message to the user
+      setLoading(false);
       alert('Failed to submit form. Please try again later.');
     }
   };
