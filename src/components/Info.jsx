@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Info = ({ formData, onChange }) => {
-  
+
   const genderOptions = [
     { value: '', label: 'Select an option...', disabled: true },
     { value: 'Male', label: 'Male' },

@@ -168,7 +168,6 @@ color: grey;
   }
   
   .answerCard {
-    -webkit-appearance: none;
     display: flex;
     padding: 20px;
     border: 1px solid rgb(209, 209, 209);
@@ -177,6 +176,17 @@ color: grey;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     cursor: pointer;
     width: 100%;
+  }
+
+  .textCard {
+    display: flex;
+    padding: 20px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    margin-top: 10px; /* Add some space between the label and input */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    width: 90%;
   }
   
   .answerCard:focus {
