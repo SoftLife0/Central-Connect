@@ -2,11 +2,6 @@ import React from 'react'
 
 const Suggestion = ({ formData, onChange }) => {
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        onChange(name, value);
-    }
-
     const stayingOptions = [
       { value: '', label: 'Select an option...' },
       { value: 'Very likely', label: 'Very likely' },
@@ -78,8 +73,8 @@ const Suggestion = ({ formData, onChange }) => {
           className="answerCard" 
           id="staying" 
           name="staying" 
-          value={formData.staying} 
-          onChange={handleInputChange}
+          value={formData["How likely are you to staying in your current job or profession?"]} 
+          onChange={(event) => onChange("How likely are you to staying in your current job or profession?", event.target.value)}
         >
           {stayingOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -95,8 +90,8 @@ const Suggestion = ({ formData, onChange }) => {
           className="answerCard" 
           id="schoolReturn" 
           name="schoolReturn" 
-          value={formData.schoolReturn} 
-          onChange={handleInputChange}
+          value={formData["How likely are you to return to the same school?"]} 
+          onChange={(event) => onChange("How likely are you to return to the same school?", event.target.value)}
         >
           {schoolReturnOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -112,8 +107,8 @@ const Suggestion = ({ formData, onChange }) => {
           className="answerCard" 
           id="unemployedReason" 
           name="unemployedReason" 
-          value={formData.unemployedReason} 
-          onChange={handleInputChange}
+          value={formData["What is the main reason you are unemployed?"]} 
+          onChange={(event) => onChange("What is the main reason you are unemployed?", event.target.value)}
         >
           {unemployedReasonOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -129,8 +124,8 @@ const Suggestion = ({ formData, onChange }) => {
           className="answerCard" 
           id="work" 
           name="work" 
-          value={formData.work} 
-          onChange={handleInputChange}
+          value={formData["Have you ever been employed since graduation?"]} 
+          onChange={(event) => onChange("Have you ever been employed since graduation?", event.target.value)}
         >
           {workOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -144,15 +139,15 @@ const Suggestion = ({ formData, onChange }) => {
       
       
 
-      {formData.work === 'Yes' && (
+      {formData["Have you ever been employed since graduation?"] === 'Yes' && (
         <div className="form-control">
           <label htmlFor="workframe" className="form-label">How long did you work?</label>
           <select 
             className="answerCard" 
             id="workframe" 
             name="workframe" 
-            value={formData.workframe} 
-            onChange={handleInputChange}
+            value={formData["How long did you work?"]} 
+            onChange={(event) => onChange("How long did you work?", event.target.value)}
           >
             {workframeOptions.map(option => (
               <option key={option.value} value={option.value}>
@@ -171,13 +166,13 @@ const Suggestion = ({ formData, onChange }) => {
         </div>
 
         <div className="form-control">
-          <label htmlFor="overall" className="form-label">How would you rate your overall satisfaction with your university’s preparation for the type of work you were/are doing?</label>
+          <label htmlFor="overall" className="form-label">How would you rate your overall satisfaction with your universityu2019s preparation for the type of work you were/are doing?</label>
           <select 
             className="answerCard" 
             id="overall" 
             name="overall" 
-            value={formData.overall} 
-            onChange={handleInputChange}
+            value={formData["How would you rate your overall satisfaction with your universityu2019s preparation for the type of work you were/are doing?"]} 
+            onChange={(event) => onChange("How would you rate your overall satisfaction with your universityu2019s preparation for the type of work you were/are doing?", event.target.value)}
           >
             {overallOptions.map(option => (
               <option key={option.value} value={option.value}>
@@ -188,13 +183,13 @@ const Suggestion = ({ formData, onChange }) => {
         </div>
         
         <div className="form-control">
-          <label htmlFor="recommend" className="form-label">Would you recommend your program to someone else or not? (If respondent is enrolled in a second tertiary program, response required for their previous program)</label>
+          <label htmlFor="recommend" className="form-label">Would you recommend your program to someone else or not? [If respondent is enrolled in a second tertiary program, response required for their previous program]</label>
           <select 
             className="answerCard" 
             id="recommend" 
             name="recommend" 
-            value={formData.recommend} 
-            onChange={handleInputChange}
+            value={formData["Would you recommend your program to someone else or not? [If respondent is enrolled in a second tertiary program, response required for their previous program]"]} 
+            onChange={(event) => onChange("Would you recommend your program to someone else or not? [If respondent is enrolled in a second tertiary program, response required for their previous program]", event.target.value)}
           >
             {recommendOptions.map(option => (
               <option key={option.value} value={option.value}>
@@ -213,8 +208,8 @@ const Suggestion = ({ formData, onChange }) => {
             placeholder="Kindly write your suggestion here ...." 
             required
             type="text" 
-            value={formData.suggestion} 
-            onChange={handleInputChange} 
+            value={formData["Do you have any suggestions for overall service delivery at Central University?"]} 
+            onChange={(event) => onChange("Do you have any suggestions for overall service delivery at Central University?", event.target.value)} 
             style={{height:'5vh'}}
           ></textarea>
         </div>

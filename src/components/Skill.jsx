@@ -1,11 +1,6 @@
 import React from 'react';
 
 const Skill = ({ formData, onChange }) => {
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    onChange(name, value);
-  };
-
 
   const skillQuestions = [
     { name: 'theoretical', label: 'Specific job-related theoretical knowledge' },
@@ -73,48 +68,48 @@ const Skill = ({ formData, onChange }) => {
     
     {/* Skills Question  */}
 
-    {skillQuestions.map((question) => (
-      <div className="form-control" key={question.name}>
-        <label htmlFor={question.name} className="form-label">{question.label}</label>
-        <select
-          className="answerCard"
-          id={question.name}
-          name={question.name}
-          value={formData[question.name]}
-          onChange={handleInputChange}
-        >
-          {skillOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </div>
-    ))}
+      {skillQuestions.map((question) => (
+        <div className="form-control" key={question.name}>
+          <label htmlFor={question.name} className="form-label">{question.label}</label>
+          <select
+            className="answerCard"
+            id={question.name}
+            name={question.name}
+            value={formData[question.label]}
+            onChange={(event) => onChange(question.label, event.target.value)}
+          >
+            {skillOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      ))}
 
     {/* Ability Question */}
     <div className='headings'>
       <p style={{ fontWeight: 'bold', textAlign: 'initial' }}>When you first started working after graduation, how would you rate your level of preparedness for the following skills and abilities. Please tell us if you were well prepared, prepared, somewhat unprepared and completely unprepared:</p>
     </div>
 
-    {abilityQuestions.map((question) => (
-      <div className="form-control" key={question.name}>
-        <label htmlFor={question.name} className="form-label">{question.label}</label>
-        <select
-          className="answerCard"
-          id={question.name}
-          name={question.name}
-          value={formData[question.name]}
-          onChange={handleInputChange}
-        >
-          {abilityOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </div>
-    ))}
+      {abilityQuestions.map((question) => (
+        <div className="form-control" key={question.name}>
+          <label htmlFor={question.name} className="form-label">{question.label}</label>
+          <select
+            className="answerCard"
+            id={question.name}
+            name={question.name}
+            value={formData[question.label]}
+            onChange={(event) => onChange(question.label, event.target.value)}
+          >
+            {abilityOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      ))}
 
     </div>
   );
