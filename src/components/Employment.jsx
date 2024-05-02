@@ -2,11 +2,6 @@ import React from 'react';
 
 const Employment = ({ formData, onChange }) => {
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    onChange(name, value);
-  };
-
   const currentOptions = [
     { value: '', label: 'Select an option...' },
     { value: 'Working full-time', label: 'Working full-time' },
@@ -84,8 +79,7 @@ const Employment = ({ formData, onChange }) => {
     <>
 
       <div className='headings'>
-        <h2>Employment Information</h2>        
-        {/* <p>Kindly fill this form</p> */}
+        <h2>Employment Information</h2>    
       </div>
       
       <div className="form-control">
@@ -94,8 +88,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="current" 
           name="current" 
-          value={formData.current} 
-          onChange={handleInputChange}
+          value={formData["Current Employment Status"]} 
+          onChange={(event) => onChange("Current Employment Status", event.target.value)}
         >
           {currentOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -111,8 +105,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="job" 
           name="job" 
-          value={formData.job} 
-          onChange={handleInputChange}
+          value={formData["How long did it take you to find your job?"]} 
+          onChange={(event) => onChange("How long did it take you to find your job?", event.target.value)}
         >
           {jobOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -128,8 +122,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="serviceOptions" 
           name="serviceOptions" 
-          value={formData.serviceOptions} 
-          onChange={handleInputChange}
+          value={formData["How related is your current job to your program of study?"]} 
+          onChange={(event) => onChange("How related is your current job to your program of study?", event.target.value)}
         >
           {serviceOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -148,8 +142,8 @@ const Employment = ({ formData, onChange }) => {
           placeholder="Organization" 
           required="" 
           type="text" 
-          value={formData.orgname} 
-          onChange={handleInputChange} 
+          value={formData["Organization"]} 
+          onChange={(event) => onChange("Organization", event.target.value)} 
         />
       </div>
 
@@ -162,8 +156,8 @@ const Employment = ({ formData, onChange }) => {
           placeholder="Organization Address" 
           required
           type="text" 
-          value={formData.orgadd} 
-          onChange={handleInputChange} 
+          value={formData["Organization Address"]} 
+          onChange={(event) => onChange("Organization Address", event.target.value)}  
         />
       </div>
 
@@ -176,8 +170,8 @@ const Employment = ({ formData, onChange }) => {
           placeholder="Job Title" 
           required="" 
           type="text" 
-          value={formData.title} 
-          onChange={handleInputChange} 
+          value={formData["Job Title"]} 
+          onChange={(event) => onChange("Job Title", event.target.value)}
         />
       </div>
 
@@ -187,8 +181,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="orgtypeOptions" 
           name="orgtypeOptions" 
-          value={formData.orgtypeOptions} 
-          onChange={handleInputChange}
+          value={formData["Type of Organization"]} 
+          onChange={(event) => onChange("Type of Organization", event.target.value)}
         >
           {orgtypeOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -204,8 +198,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="salaryOptions" 
           name="salaryOptions" 
-          value={formData.salaryOptions} 
-          onChange={handleInputChange}
+          value={formData["What is your current monthly gross salary?"]} 
+              onChange={(event) => onChange("What is your current monthly gross salary?", event.target.value)}
         >
           {salaryOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -221,8 +215,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="employmentOptions" 
           name="employmentOptions" 
-          value={formData.employmentOptions} 
-          onChange={handleInputChange}
+          value={formData["In your current job, are you"]} 
+          onChange={(event) => onChange("In your current job, are you", event.target.value)} 
         >
           {employmentOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -238,8 +232,8 @@ const Employment = ({ formData, onChange }) => {
           className="answerCard" 
           id="skillsOptions" 
           name="skillsOptions" 
-          value={formData.skillsOptions} 
-          onChange={handleInputChange}
+          value={formData["To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were"]} 
+              onChange={(event) => onChange("To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were", event.target.value)} 
         >
           {skillsOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -250,13 +244,13 @@ const Employment = ({ formData, onChange }) => {
       </div>
 
       <div className="form-control">
-        <label htmlFor="timeframeOptions" className="form-label">To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were</label>
+        <label htmlFor="timeframeOptions" className="form-label">How long have you been employed or self-employed?</label>
         <select 
           className="answerCard" 
           id="timeframeOptions" 
           name="timeframeOptions" 
-          value={formData.timeframeOptions} 
-          onChange={handleInputChange}
+          value={formData["How long have you been employed or self-employed?"]} 
+          onChange={(event) => onChange("How long have you been employed or self-employed?", event.target.value)} 
         >
           {timeframeOptions.map(option => (
             <option key={option.value} value={option.value}>
@@ -267,13 +261,13 @@ const Employment = ({ formData, onChange }) => {
       </div>
 
       <div className="form-control">
-        <label htmlFor="earnOptions" className="form-label">To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were</label>
+        <label htmlFor="earnOptions" className="form-label">Did your degree earned from CU provide the requisite technical know-how of your job?</label>
         <select 
           className="answerCard" 
           id="earnOptions" 
           name="earnOptions" 
-          value={formData.earnOptions} 
-          onChange={handleInputChange}
+          value={formData["Did your degree earned from CU provide the requisite technical know-how of your job?"]} 
+          onChange={(event) => onChange("Did your degree earned from CU provide the requisite technical know-how of your job?", event.target.value)} 
         >
           {earnOptions.map(option => (
             <option key={option.value} value={option.value}>
