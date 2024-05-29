@@ -51,13 +51,14 @@ const Info = ({ formData, onChange }) => {
       <div className="form-control">
         <label htmlFor="workAddress" className="form-label">Work Address</label>
         <input 
-          className="answerCard" 
+          className="" 
           id="workAddress" 
           name="workAddress" 
           placeholder="Work Address" 
-          type="text" 
-          value={formData["Work Address"]} // Assuming "Work Address" is the key in your formData state object
-          onChange={(event) => onChange("Work Address", event.target.value)} // Assuming onChange is your change handler function
+          type="text"
+          required 
+          value={formData["Work Address"]}
+          onChange={(event) => onChange("Work Address", event.target.value)}
         />
       </div>
 

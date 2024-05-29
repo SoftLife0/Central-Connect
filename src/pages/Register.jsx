@@ -107,7 +107,7 @@ const Register = () => {
                 <SubmitButton type="submit" text="Connect Now" />
               </form>
               <div style={{ textAlign: 'center' }}>
-                <small><a href="/login">Already have an account ?</a></small>
+                <small><a href="/">Already have an account ?</a></small>
               </div>
             </Grid>
           </Grid>
