@@ -1,4 +1,4 @@
-# Getting Started with Central Connect for Alumni's using Create React App 
+# Central Connect for Alumni's 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
